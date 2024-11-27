@@ -6,33 +6,33 @@ export default function Accordian() {
   const [array, setArray] = useState([
     {
       id: 1,
-      title: "accordian 1",
+      title: "Wiki Content",
       show: false,
-      desc: "Lorem ipsum is a placeholder or dummy text used in typesetting and graphic design for previewing layouts1.",
+      desc: "Wiki content refers to content contained in an article that a Wikipedian created or is naturally existent1. Wiki is sometimes used on a page to visually or encyclopedically improve the article's value1. A content page is a page with encyclopedic value1.A wiki engine is a form of a content management system that differs from other web-based systems such as blog software2. The content is created without any defined owner or leader, and wikis have little inherent structure, allowing structure to emerge according to the needs of the users2.",
     },
     {
       id: 2,
-      title: "accordian 2",
+      title: "Describe UI",
       show: false,
-      desc: "Lorem ipsum is a placeholder or dummy text used in typesetting and graphic design for previewing layouts2.",
+      desc: "React is a JavaScript library for rendering user interfaces (UI). UI is built from small units like buttons, text, and images. React lets you combine them into reusable, nestable components. From web sites to phone apps, everything on the screen can be broken down into components. In this chapter, you’ll learn to create, customize, and conditionally display React components.",
     },
     {
       id: 3,
-      title: "accordian 3",
+      title: "Your First Component",
       show: false,
-      desc: "Lorem ipsum is a placeholder or dummy text used in typesetting and graphic design for previewing layouts3.",
+      desc: "React applications are built from isolated pieces of UI called components. A React component is a JavaScript function that you can sprinkle with markup. Components can be as small as a button, or as large as an entire page. Here is a Gallery component rendering three Profile components:",
     },
     {
       id: 4,
-      title: "accordian 4",
+      title: "Importing and Exporting Component",
       show: false,
-      desc: "Lorem ipsum is a placeholder or dummy text used in typesetting and graphic design for previewing layouts4.",
+      desc: "You can declare many components in one file, but large files can get difficult to navigate. To solve this, you can export a component into its own file, and then import that component from another file:",
     },
     {
       id: 5,
-      title: "accordian 5",
+      title: "Writing markup with JSX",
       show: false,
-      desc: "Lorem ipsum is a placeholder or dummy text used in typesetting and graphic design for previewing layouts5.",
+      desc: "Each React component is a JavaScript function that may contain some markup that React renders into the browser.",
     },
   ]);
   const [enableMultiSelect, setEnableMultiSelect] = useState(false);
@@ -89,9 +89,7 @@ export default function Accordian() {
                 <span>{i.show ? "-" : "+"}</span>
               </div>
               {i.show && (
-                <div className="accordion-body p-3 border-top">
-                  {i.desc}
-                </div>
+                <div className="accordion-body p-3 border-top">{i.desc}</div>
               )}
             </div>
           );
