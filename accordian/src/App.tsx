@@ -1,14 +1,17 @@
-import Accordian from "./components/Accordian";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router';
+import routes from './routes/routes';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div>
-      <header className="text-center fw-bold p-4">Accordian App</header>
-      <br />
-      <br />
-      <Accordian></Accordian>
-    </div>
+    <Router>
+      <Routes>
+        {routes.map((route, index) => (
+          <Route key={index} path={route.path} element={route.element} />
+        ))}
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

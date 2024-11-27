@@ -76,6 +76,7 @@ export default function Accordian() {
 
   return (
     <div className="container my-4">
+      <header className="text-center fw-bold p-4">Accordian App</header>
       <div className="text-center mb-3">
         <button
           className="btn btn-primary"
