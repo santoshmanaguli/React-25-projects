@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./Accordian.css";
 
 interface Accordian {
-  id: Number;
+  id: number;
   desc: String;
   show: boolean;
   title: String;
