@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react";
 import "./Accordian.css";
 
+interface Accordian {
+  id: Number;
+  desc: String;
+  show: boolean;
+  title: String;
+}
+
 export default function Accordian() {
   //state
-  const [array, setArray] = useState([
+  const [array, setArray] = useState<Accordian[]>([
     {
       id: 1,
       title: "Wiki Content",
@@ -35,7 +42,7 @@ export default function Accordian() {
       desc: "Each React component is a JavaScript function that may contain some markup that React renders into the browser.",
     },
   ]);
-  const [enableMultiSelect, setEnableMultiSelect] = useState(false);
+  const [enableMultiSelect, setEnableMultiSelect] = useState<boolean>(false);
 
   useEffect(() => {
     //resetting the array when button toggle
